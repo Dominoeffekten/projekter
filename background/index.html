@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="DK-da">
+<head>
+<meta charset="UTF-8">
+<title>Background</title>
+<style>
+
+body{
+  background-color: #fff;
+}
+    .random{
+			height: 20px;
+			width: 20px;
+			float: left;
+		}
+
+    
+	</style>
+</head>
+
+<body id='bod'>
+    <section>
+        <div class="random"></div>
+        
+      </section>
+</body>
+
+<!-- Orginalt fra https://cdnjs.com/libraries/jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  'use strict';
+  
+   //Skifte random farve imgs[i % imgs.length]
+    var colors = ['#FF9587','#EB65BA','#D794FF','#827BE8','#87C1FF','orange'];
+    
+    for (let x = 2; x%colors.length; x++) {
+      for(var i = 1; i<= 653; i++){
+      $('body').append('<div id="r'+ i +'" class="random"></div>');
+      }
+
+    $('.random').css('background-color', function() {
+      var i = Math.floor(Math.random()*colors.length);
+      var color = colors[i];
+      colors.splice(i, 1);
+      return color;
+    });
+  }
+  
+ 
+
+  //skifte farve
+   /* window.addEventListener("keydown", event => {
+        if (event.key == "l"){
+            document.body.style.background = "violet";
+        }
+    });
+
+     //Skifte random farve
+   var r = Math.random() * 255;
+  var g = Math.random() * 255;
+  var b = Math.random() * 255;
+  var new_color = "rgb(" + r + "," + g + "," + b + ")";
+
+
+  $(document).ready(function() {
+   $('.random').each(function(){
+      var r = Math.random() * 255;
+      var g = Math.random() * 255;
+      var b = Math.random() * 255;
+      var new_color = "rgb(" + r + "," + g + "," + b + ")";
+      $(this).css('background-color',new_color);
+   });
+});
+   */
+ 
+
+
+
+
+			
+
+
+</script>
+	
+	
+</html>
