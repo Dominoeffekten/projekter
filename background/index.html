@@ -8,19 +8,13 @@
 body{
   background-color: #fff;
 }
-    .random{
-			height: 20px;
-			width: 20px;
-			float: left;
-		}
-
     
 	</style>
 </head>
 
-<body id='bod'>
+<body>
     <section>
-        <div class="random"></div>
+        <p>Tryk l, h, c, s, o</p>
         
       </section>
 </body>
@@ -30,55 +24,32 @@ body{
 
 <script>
   'use strict';
-  
-   //Skifte random farve imgs[i % imgs.length]
-    var colors = ['#FF9587','#EB65BA','#D794FF','#827BE8','#87C1FF','orange'];
-    
-    for (let x = 2; x%colors.length; x++) {
-      for(var i = 1; i<= 653; i++){
-      $('body').append('<div id="r'+ i +'" class="random"></div>');
-      }
-
-    $('.random').css('background-color', function() {
-      var i = Math.floor(Math.random()*colors.length);
-      var color = colors[i];
-      colors.splice(i, 1);
-      return color;
-    });
-  }
-  
- 
-
   //skifte farve
-   /* window.addEventListener("keydown", event => {
+   window.addEventListener("keydown", event => {
         if (event.key == "l"){
-            document.body.style.background = "violet";
+            document.body.style.background = "#87C1FF";
         }
     });
-
-     //Skifte random farve
-   var r = Math.random() * 255;
-  var g = Math.random() * 255;
-  var b = Math.random() * 255;
-  var new_color = "rgb(" + r + "," + g + "," + b + ")";
-
-
-  $(document).ready(function() {
-   $('.random').each(function(){
-      var r = Math.random() * 255;
-      var g = Math.random() * 255;
-      var b = Math.random() * 255;
-      var new_color = "rgb(" + r + "," + g + "," + b + ")";
-      $(this).css('background-color',new_color);
-   });
-});
-   */
- 
-
-
-
-
-			
+    window.addEventListener("keydown", event => {
+        if (event.key == "o"){
+            document.body.style.background = "#827BE8";
+        }
+    });
+    window.addEventListener("keydown", event => {
+        if (event.key == "s"){
+            document.body.style.background = "#D794FF";
+        }
+    });
+    window.addEventListener("keydown", event => {
+        if (event.key == "c"){
+            document.body.style.background = "#EB65BA";
+        }
+    });
+    window.addEventListener("keydown", event => {
+        if (event.key == "h"){
+            document.body.style.background = "#FF9587";
+        }
+    });
 
 
 </script>
