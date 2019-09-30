@@ -1,0 +1,50 @@
+//HTML - HEAD
+
+//Favicon
+<link rel="icon" href="(fil-URI)" type="image/(FILTYPE)"/>
+<link rel="shortcut icon" href="fil-URI" type="image/(FILTYPE)"/>
+
+
+
+//JS
+//jQuery
+<!-- Orginalt fra https://cdnjs.com/libraries/jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+//Webfont
+	<!-- Orginalt fra https://cdnjs.com/libraries/webfont og https://github.com/typekit/webfontloader-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+
+//Cookie banner
+<!--Orginalt fra https://cookieconsent.insites.com/download/ -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000000",
+      "text": "#ffffff"
+    },
+    "button": {
+      "background": "#f29726",
+      "text": "#000000"
+    }
+  },
+  "showLink": false,
+  "theme": "classic",
+  "position": "top",
+  "content": {
+    "message": "Dette websted anvender cookies; ved at anvende dette websted er du helt indforstået med - og acceptere - dette forhold. ",
+    "dismiss": "Forstået!"
+  }
+})});
+</script>
