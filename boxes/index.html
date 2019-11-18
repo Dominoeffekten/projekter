@@ -9,8 +9,8 @@ body{
   background-color: #fff;
 }
     .random{
-			height: 20px;
-			width: 20px;
+			height: 30px;
+			width: 30px;
 			float: left;
 		}
 
@@ -18,10 +18,14 @@ body{
 	</style>
 </head>
 
-<body id='bod'>
+<body>
     <section>
-        <div class="random"></div>
+      <button id="all">Alle</button>
+      <button id="delOrange">Orange</button><br>
+        <div class="random" id="random"></div>
+      
         
+
       </section>
 </body>
 
@@ -30,27 +34,47 @@ body{
 
 <script>
   'use strict';
-  
+  //Skift farve
+  var colors = ['#FF9587','#EB65BA','#D794FF','#827BE8','#87C1FF']; //orange, lyserød, lilla, koral, blå
+
+      for(var i = 0; i <= 300; i++){
+          $('body').append('<div id="random'+ i%colors.length +'" class="random"></div>');
+        }
+      $('.random').css('background-color', function() {
+        var i = Math.floor(Math.random()*colors.length);
+        var color = colors[i];
+        return color;
+      });
+
+      document.getElementById("delOrange").addEventListener("click", del);
+        function del() {
+            document.getElementById("random").innerHTML = colors.splice(0);
+            document.getElementById("delOrange").removeEventListener('click', del);
+        }
+
+      
+
+  /*
    //Skifte random farve imgs[i % imgs.length]
-    var colors = ['#FF9587','#EB65BA','#D794FF','#827BE8','#87C1FF','orange'];
+    var colors = ['#FF9587','#EB65BA','#D794FF','#827BE8','#87C1FF'];
     
-    for (let x = 2; x%colors.length; x++) {
-      for(var i = 1; i<= 653; i++){
-      $('body').append('<div id="r'+ i +'" class="random"></div>');
+    for (let x = 1; x <= 653; x++) {
+      
+      for(var i = 1;i < colors.length; i++){
+          $('body').append('<div id="r'+ i +'" class="random"></div>');
       }
 
-    $('.random').css('background-color', function() {
-      var i = Math.floor(Math.random()*colors.length);
-      var color = colors[i];
-      colors.splice(i, 1);
-      return color;
-    });
-  }
+      $('.random').css('background-color', function() {
+        var i = Math.floor(Math.random()*colors.length);
+        var color = colors[i];
+        return color;
+      })
+    }
   
  
 
   //skifte farve
-   /* window.addEventListener("keydown", event => {
+    window.addEventListener("keydown", event => {
         if (event.key == "l"){
             document.body.style.background = "violet";
         }
@@ -72,7 +96,8 @@ body{
       $(this).css('background-color',new_color);
    });
 });
-   */
+*/
+    
  
 
 

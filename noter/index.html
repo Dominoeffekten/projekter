@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="DK-da">
+  <head>
+    <meta charset="utf-8">
+    <title>Webudvikling - JS</title>
+	  <link rel="stylesheet" href="style.css">
+	  <!-- Orginalt fra https://cdnjs.com/libraries/jquery -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="web.js"></script>
+	  
+  </head>
+  <body>
+      <section class="main">
+		  <div class="header">
+			  <a href="index.html">Webudvikling</a>
+			  <a href="udvikling.html">Udviklingsprojekter</a>
+			  <a href="bruger.html">Brugeroplevelser</a>
+		  </div>
+        <h1>Webudvikling</h1>
+
+		  <div class="miniHeader">
+			  <a href="#no1">Value, types &amp; operatores</a>
+			  <dd><a href="#no1-1">Loops</a></dd>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch03.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no2">Conditionals</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch04.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no3">Functions &amp; scope</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch05.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no4">Array</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch06s03.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no5">Loops</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch07s03.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no6">DOM</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch08s03.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no7">Switch &amp; Cookies</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch09s03.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="https://github.com/lervad96/projekt-spil" target="_blank">Projekt opgave</a>
+			  <a href="#no8">Objekter</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch10s05.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no9">Canvas</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch11.xhtml" target="_blank">Niels' lektion</a></dd>
+			  <a href="#no10">Moduler</a>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch22.xhtml" target="_blank">Niels' lektion I</a></dd>
+			  <dd><a href="http://dkexit.eu/webdev/site/ch23s03.xhtml" target="_blank">Niels' lektion II</a></dd>
+
+			  <a href="#no11">SVG</a>
+				<dd><a href="http://dkexit.eu/webdev/site/ch24.xhtml" target="_blank">Niels' lektion I</a></dd>
+				<dd><a href="http://dkexit.eu/webdev/site/ch25.xhtml" target="_blank">Niels' lektion II</a></dd>
+			  <a href="#no12">Headning12</a>
+			  <a href="#no13">Headning13</a>
+			  <a href="#noEnd">Tips &amp; tricks</a>
+			  <a href="http://dkexit.eu/webdev/site/apbs02.xhtml" target="_blank">Solutions</a>
+		  </div>
+
+
+		  <br><h2 id="no1">Values, types &amp; operatores</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/Assignments-JS.1" target="_blank">Assignment</a></h4>
+		  <p>Values are the information you give JavaScript, they are made of bits. <br>
+		  The blocks begins with {} and are statements, loop, function and event, where objects are stings and arrays. <br>
+		  The statements are groups og numbers/words/operators that perfom a specific task. THey are made of ecpression as variables and values.<br>
+		  Variables are simple boxes where you can store ant stuff in, it is like a placeholder, that starts with var, const or let. You can change the value of var anytime, but not const or let. </p>
+<pre>
+</pre>
+		  	  <p>Literal value perfome actions with values and variables, where values are written directly in the source. Expression reference to a variable or value, or a swt of the cembined with operators. </p>
+<pre>
+a = b * 2;
+
+2 is literal value expression
+b is variable expression (retrieve its current)
+b - 2 is arithmetic expression (because of the multiplication)
+a = b * 2 is an assignment expression (because of the result)
+</pre>
+		  	  <p>Interpreting are translation of commands from top to bottom, where compliting are translation of commands head of time <br>
+			Types representation values, where primitive values are; Numbers (if you want to do math), String (if you want to print) and Booleans - true/false (if you want to make a decision). Variables can vary over time, but const are static typing/type enforcement, and can only hold one value. Var are dynamic typing(weak typing), can hold any value of any type and can change if you want to. You use let if there is used binding or variable as a second kind of statement</p>
+			
+		  <h3 id="no1-1">Loops</h3>
+		  <p> While loop repeats a block of statement as long as the statements is true. Is it false does it not run, where a do.. while loop repeats a block of statement as long as the statements is true.  Is it false does it run one time. Loop iteration variable is {i}.</p>
+<pre>
+</pre>
+			<p>Functions are sections of code that can be called by name, where scope are the collections of variables as well as rules of how those variables are acced by name. There can’t be 2 variables with the same name but there can be a scope inside a scope</p>
+		  	<p> Array is a object that holds values</p>
+<pre>
+Inequality (<, >, <=, =>)
+
+Større end, mindre end, lig med eller mindre/større
+Equality (==, ===, !=, !==)
+
+== - check value equality (Lig med)
+=== - checks value type (Identisk)
+!= - not equal
+!== - not identical
+</pre>				
+				<table>
+		  	<tr>
+    			<th>The word</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>Explicit coercion</td>
+    			<td>what you see, is what you get - a = 42</td>
+  			</tr>
+			<tr>
+    			<td>Implicit coercion</td>
+    			<td>What you see is not what you get - a = b * 2</td>
+  			</tr>
+			<tr>
+    			<td>Break</td>
+    			<td>Only want the statements in one case to run</td>
+  			</tr>
+			<tr>
+    			<td>Strict mode</td>
+    			<td>Write in the top</td>
+  			</tr>
+			<tr>
+    			<td>Clouser</td>
+    			<td>W..?</td>
+  			</tr>
+			<tr>
+    			<td>Moduls</td>
+    			<td>let you define private implementation details <br>(variables/functions) that are hidden from the outside</td>
+  			</tr>
+			</table>
+
+		  <br><h2 id="no2">Conditionals</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/assignments-JS.Conds" target="_blank">Assignment</a></h4>
+		  <p>Every value has a type that determines it's role. Binary operators is 2 values, where unary operators is 1 value. The condition typeof produces a string value naming the type of the value you give it</p>
+<pre>
+Operators
++, *, -, /, 
+
+NaN = not a number
+</pre>
+			<table>
+		  	<tr>
+    			<th>The word</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>Math.max</td>
+    			<td>takes any amount of number arguments <br>and give back the greatest</td>
+  			</tr>
+			<tr>
+    			<td>Math.min</td>
+    			<td>is used as a part of plus expression <br>(Are the opposite of Math.max)</td>
+  			</tr>
+			<tr>
+    			<td>Side effects</td>
+    			<td>is showing a dialog box or writing text to the screen</td>
+  			</tr>
+			</table>
+
+
+		  
+		  <br><h2 id="no3">Functions &amp; scope</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/Assignments-JS.Funcs" target="_blank">Assignment</a></h4>
+		  <p>Function is a regular binding where the value of the binding is a function. A function is created with an expression and has a set of parameters and a body.</p>
+<pre>
+'use strict';
+function sum(a, b) {
+    return a + b;
+}
+</pre>  
+			<p>Each binding have a scope, which makes the binding visible. The local binding can be called inside a function, but not outside. Where a global binding can be called outside the function. </p>
+<pre></pre>
+			<p>An arrow function function is where you can use an arrow insted of the normal function.</p>
+<pre>
+'use strict';
+const diff3 = (a, b) => {
+    return a - b;
+}
+</pre>
+			<p>Cloure reference a specific instance of a local binding in an enclosing scope, where recursion is a function that calls it self. Each block creates a new scope. </p>
+<pre></pre>		  
+		  
+		  
+		  
+		  <br><h2 id="no4">Array</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/Assignments-JS.Arrays" target="_blank">Assignment</a></h4>
+		  <p>Object s allow us to group values - including other objects. Array is a list with values. It is an expression with holds an expression inside the brackets.</p>
+<pre>
+let listOfNumbers = [2, 3, 5, 7, 11];
+console.log(listOfNumbers[2]);
+//5
+</pre>
+		   <p>In JavaScript is can you acces the proprties ith a dot or a squar bracket. <b>value.x</b> (x is a literal name of the property) and <b>value[x]</b> (the expression betwwn the brackets is evaluated to get the property name). </p>
+<pre>
+value.color
+ - If you know the property you are interested in
+value[2]
+- If you want to extract the property name
+</pre>
+			<p>Both strings and arrays contains objects. In programming is a stack a data struture where you can put information and remove it again. </p>
+		  <table>
+		  	<tr>
+    			<th>Methods of the string</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>toUpperCase</td>
+    			<td>Writes the string in uppercase LETTERS</td>
+  			</tr>
+			 <tr>
+    			<td>toLowerCase</td>
+    			<td>Writes the string in lowercase letters</td>
+  			</tr>
+			  <tr>
+    			<td>push</td>
+    			<td>Adds a value to an array</td>
+  			</tr>
+			  <tr>
+    			<td>pop</td>
+    			<td>Remove a value from an array</td>
+  			</tr>
+		  </table>
+ 
+		  	<p>When we are talking about objects are we talking about arbitray collections of properties. You can use brackets as en expression. Each expression has a name followed by a colon and a value</p>
+<pre>
+let day1 = {
+	breakfast: false,
+	events ['school', 'work', 'homework', 'friends']
+};
+console.log(day1.breakfast);
+//false
+console.log(day1.lunch);
+//undefined
+</pre>
+		  
+		  <table>
+		  	<tr>
+    			<th>Methods of the string</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>object.keys</td>
+    			<td>Gives you en arry of a string</td>
+  			</tr>
+			  <tr>
+    			<td>object.assign</td>
+    			<td>Copies all propeties from one object into another</td>
+  			</tr>
+			  <tr>
+    			<td>typeof []</td>
+    			<td>It produces the object</td>
+  			</tr>
+			 </table>
+<pre>
+console.log(Object.keys({x: 0, y: 0, z: 2}));
+// ['x', 'y', 'z']
+
+let objectA {a: 1, b: 2};
+Objeckt.assign(objectA {b: 3, c: 4});
+console.log(objctA);
+// {a: 1 b: 3 c:4}
+</pre>
+		  	<p>You can't change immutable values as Booleans, strings or numbers, but you can change the there propeties. Each obejct has there own life, that is why you can change them, but there propeties</p>
+		    <table>
+		  	<tr>
+    			<th>Methods of the string</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>Corretion</td>
+    			<td>Something where you are measure if they fit together</td>
+  			</tr>
+			  <tr>
+    			<td>1</td>
+    			<td>The variables are perfectt related (if you know one, do you also know the other</td>
+  			</tr>
+			  <tr>
+    			<td>0</td>
+    			<td>The variables are not related</td>
+  			</tr>
+				<tr>
+    			<td>-1</td>
+    			<td>The variables are perfectt related, but they are opposite - one is true the other is false</td>
+  			</tr>
+			<tr>
+    			<td>unshift</td>
+    			<td>Adding thing in the start of an array</td>
+  			</tr>
+				<tr>
+    			<td>shift</td>
+    			<td>Removing things in the start of an array</td>
+  			</tr>
+			 </table>
+<pre>
+let toDoList = [];
+function today(task){
+	toDoList(task);
+};
+function getTask(){
+	return toDoList();
+};
+function tomorrow(task){
+	toDoList.unshift(task)
+};
+</pre>
+			  	<table>
+		  	<tr>
+    			<th>Methods of the string</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>trim</td>
+    			<td>Remove the whitespace (spaces, newlines, tabs and so on..)</td>
+  			</tr>
+			<tr>
+    			<td>padStart</td>
+    			<td>Takes the desired lenght and padding character as arguments</td>
+  			</tr>
+			<tr>
+    			<td>Math.random</td>
+    			<td>Creates a random numer</td>
+  			</tr>
+			<tr>
+    			<td>Math.floor</td>
+    			<td>Rounds down to the nearst whole number</td>
+  			</tr>
+			 
+		  </table>
+	
+		  <br><h2 id="no5">Loop</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/Assignments-JS.Arrays" target="_blank">Assignment</a></h4>
+		  <p>There are while, do.. while and for loops</p>
+		  <p>Normally iterations in a program, repetition of code, is done with special statements, as we shall see very shortly. With conditionals and functions in place the phenomenon of recursion is perfectly suited for repetitive execution of code in a program. Let us see a countdown:</p>
+<pre>
+'use strict';
+const countdown = function(n) {
+    if (n === 0)
+        console.log('Go!');
+    else {
+        console.log(n);
+        countdown(n - 1);
+    }
+}
+
+countdown(7);
+</pre>
+	  <p><b>While loop</b> The do while does something as long the loop is something <br>
+	  You ask the question after the loop (in while). The do while will run one time, and they check if it works. - Ask for forgivness after, not before ;) </p>
+<pre>
+let i = 0;
+do {
+	console.log(i);
+	i++;
+} while (1 < 10);
+
+</pre>
+<pre>
+'use strict';
+let i = 0;
+while (i < 10) {
+
+    // code to be repeated
+    console.log('Rep ' + i);
+
+    i++;
+}
+
+console.log('after loop ' + i);
+</pre>
+	  <p><b>Do while</b></p>
+<pre>
+'use strict';
+let wordlist = [];
+let word = '';
+do {
+    if (word === '9')   // exit loop on a nine
+        break;
+    if (word === '')    // ignore empty strings
+        continue;
+    if (wordlist.indexOf(word) !== -1) // is word already there
+        continue;
+    wordlist.push(word);    // push word onto array
+    console.log('There\'s now ' + wordlist.length + ' words in the list');
+} while (word = prompt('Enter a good long word'));
+
+console.log(wordlist);
+wordlist.sort();
+console.log(wordlist);
+</pre>
+	  <p><b>For loop</b> kan det samme som while</p>
+<pre>
+'use strict';
+for (var i = 0; i < 10; i++) {
+
+    // code to be repeated
+    console.log('Rep ' + i);
+
+}
+
+console.log('after loop ' + i);
+</pre>
+				<table>
+		  	<tr>
+    			<th>Methods of the string</th>
+    			<th>What is it?</th>
+  			</tr>
+			<tr>
+    			<td>break</td>
+    			<td>stops the loop</td>
+  			</tr>
+			<tr>
+    			<td>continue</td>
+    			<td>skips to the next code <br> - you can skip some code, that is not going to be used</td>
+  			</tr>
+			<tr>
+    			<td>indexOf</td>
+    			<td>does we have the element in the loop/array?</td>
+  			</tr>
+			<tr>
+    			<td>sort()</td>
+    			<td>you can sort the words</td>
+  			</tr>
+			<tr>
+    			<td>spread operator ... </td>
+    			<td>Up to 10 times, are making an array, <br>where there isn't anything inside it</td>
+  			</tr>
+			<tr>
+    			<td>map()</td>
+    			<td>Method creates a new array with the results <br>of calling a function for every array element.</td>
+  			</tr>
+			</table>
+	
+
+			
+		  <br><h2 id="no6">DOM</h2>
+		  <h4><a href="#" target="_blank">Assignment</a></h4>
+		  
+		  <table>
+		  	<tr>
+    			<th>Something I dont know</th>
+    			<th>What it is</th>
+  			</tr>
+			<tr>
+    			<td>HTTP</td>
+    			<td>Hypertext Transfer Protocol <br> is a protocol where you can get chunks <br> of information  such as websites and pictures</td>
+  			</tr>
+			<tr>
+    			<td>TCP</td>
+    			<td>Transmission Control Protocol <br> One computer are waiting for others to talk <br> Each listner has a number/port <br> the listing computer is called the server <br>and the conneted computer is the client</td>
+  			</tr>
+			<tr>
+    			<td>URL</td>
+    			<td>Uniform Resource Locator</td>
+  			</tr>
+			<tr>
+    			<td>IP adress </td>
+    			<td>Computers connted to the internet gets an IP adress</td>
+  			</tr>
+			<tr>
+    			<td>Sandboxing</td>
+    			<td>Isolating a programming envoriment</td>
+  			</tr>
+			<tr>
+    			<td>DOM</td>
+    			<td>Document Object Model <br>
+				shows what there are on the website</td>
+  			</tr>
+			<tr>
+    			<td>childNodes</td>
+    			<td>Holds an array-like object, <br>with and lenght property</td>
+  			</tr>
+			<tr>
+    			<td>parentNode</td>
+    			<td>shows only one link of each type <br> every node has a parentNode property </td>
+  			</tr>
+			<tr>
+    			<td>descendants</td>
+    			<td>direct or indirect children</td>
+  			</tr>
+			<tr>
+    			<td>.getElementById()</td>
+    			<td>find a specific single node</td>
+			  </tr>
+			  <tr>
+    			<td>.getElementsByClassName()</td>
+    			<td>find specific nodes with the class name</td>
+			  </tr>
+			  <tr>
+    			<td>querySelector() / querySelectorAll()</td>
+    			<td>Where you can change the style(CSS)<br> Gives one element</td>
+  			</tr>
+			<tr>
+    			<td>appendChild</td>
+    			<td>add a child node to an element node</td>
+  			</tr>
+			<tr>
+    			<td>insertBefore</td>
+    			<td>inderts the node given as the first argument</td>
+  			</tr>
+			<tr>
+    			<td>document.createTextNode</td>
+    			<td>removing imgages ans adding a new text</td>
+			  </tr>
+			  <tr>
+    			<td>headings ans paragrephs</td>
+    			<td>separate lines - block elements</td>
+			  </tr>
+			  <tr>
+    			<td>links and strong</td>
+    			<td>inline elements</td>
+			  </tr>
+			  <tr>
+    			<td>keydown / mousedown</td>
+    			<td>when you press a word on your keyboard</td>
+			  </tr>
+			  <tr>
+    			<td>keyup / mouseup</td>
+    			<td>when you move you finger from the keyboard</td>
+			  </tr>
+			  <tr>
+    			<td>scroll</td>
+    			<td>can be used if you want <br>to tell how much you have read</td>
+			  </tr>
+			  <tr>
+    			<td>load</td>
+    			<td>are used when you need to built the page before JS</td>
+			  </tr>
+			  <tr>
+    			<td>appendChild</td>
+    			<td>Are used to make something in a body</td>
+			  </tr>
+			  
+		</table>
+		<img src="billeder/java/dom1.png" width="500">
+
+<pre>
+let d = document.getElementById('divI');
+d.style.backgroundColor = 'yellow';
+
+- SKriver det som stylesheet (stylesheet)
+
+let dd = document.getElementById('divI');
+dd.setAttribute('style', 'font-style: oblique;');
+
+- Skriver det ind HTML (inline CSS)
+</pre>
+		  
+		  
+		  <br><h2 id="no7">Switch &amp; Cookies</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/JS.DOM.1" target="_blank">Assignment</a></h4>
+			<h3>Switch</h3>	  
+		  <p>
+				When you use swith do you use case instead of if else. 
+				You MUST write break in the end of the cases, so the code stops.
+
+			</p>
+<pre>
+'use strict';
+...
+res = roll(6);
+switch (res) {
+	case 1:
+		ones++;
+		break;
+	case 2:
+		twos++;
+		break;
+	case 3:
+		threes++;
+		break;
+	case 4:
+		fours++;
+		break;
+	case 5:
+		fives++;
+		break;
+	case 6:
+		sixes++;
+		break;
+}
+...
+</pre>
+<pre>
+// man kan ikke bruge swift til flere variabler
+	case 1:
+	case 2:
+	case 3
+		under 4++;
+		break;
+	default: //instead of else
+		over 5++;
+		break;
+		
+if (res === 1 || res === 2 || res === 3){
+	over 4++;
+}
+</pre>
+				<h3>Cookies</h3>
+				<p></p>
+<pre>
+//You have made a cookie - path=/ (Who does it belong to? - just write a /)
+// THe cookies is dead when you close the browser
+
+document.cookie = 'foo=bar; path=/';
+</pre>
+
+<pre>
+//If you want to keep the cookie use expires
+// bar=baz is the name of the cookie
+		
+document.cookie = 'bar=baz; path=/; expires=Thur, Sep 26 2019 15:27:28';
+</pre>
+
+<pre>
+	"use strict"; 
+
+//Creates cookie
+
+	function createCookie(name, value, days) {
+		let expires;
+		if (days) {
+			let date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			expires = "; expires=" + date.toGMTString();
+		}
+		else {
+			expires = "";
+		}
+		document.cookie = name + "=" + value + expires + "; path=/";
+	}
+
+//If you want to se your score
+
+		function readCookie(name) {
+			let nameEQ = name + "=";
+			let ca = document.cookie.split(";");
+			for (let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == " ") {
+					c = c.substring(1,c.length);
+				}
+				if (c.indexOf(nameEQ) == 0) {
+					return c.substring(nameEQ.length, c.length);
+				}
+			}
+			return null;
+		}
+		
+		function eraseCookie(name) {
+			createCookie(name, "", -1);
+		}
+</pre>
+
+
+		  <br><h2 id="no8">Objekter</h2>
+		  <h4><a href="https://github.com/Dominoeffekten/JS.OOP.1" target="_blank">Assignment</a></h4>
+		  		  <p></p>
+<pre>
+"use strict";
+/*
+ * oolit.js
+ */
+					// JavaScript Object Notation
+let Student = {};                       // An empty object
+		
+let Person = {                          // create object
+		first: "niels",
+		last: "larsen"
+	}
+		
+console.log(Person.first + " " + Person.last);          // preferred syntax
+console.log(Person["first"] + " " + Person["last"]);    // alternative syntax
+</pre>
+<br><h2 id="no9">Canvas</h2>
+<h4><a href="https://github.com/Dominoeffekten/JS.canvas" target="_blank">Assignment 1</a></h4>
+<h4><a href="https://github.com/Dominoeffekten/JS.anim" target="_blank">Assignment 2</a></h4>
+<table>
+	<tr>
+		<td>SVG</td>
+		<td>scalable vector graphic</td>
+	</tr>
+	<tr>
+		<td>Firkant - fillRect(20, 10, 120, 40)</td>
+		<td>20px hen, 10px ned, 120px længde, 40px bredde</td>
+	</tr>
+	<tr>
+		<td>Cirkel - arc(150, 150, 50, 0, Math.PI * 2, true);</td>
+		<td>arc(150px nede, 150px hen, radius, startvinkel, slutvinkel/grader, uret rundt);</td>
+	</tr>
+	<tr>
+		<td>Firkant - strokeRect(250, 250, 40, 40)</td>
+		<td>strokeRect(250px hen, 250px ned, 40px længde, 40px bredde)</td>
+	</tr>
+	<tr>
+		<td>moveTo(50, 200)</td>
+		<td>goto coordinate in canvas (flytter startpunktet)<br>
+			moveTo(50px hen, 200px ned)</td>
+	</tr>
+	<tr>
+		<td>lineTo(150, 50);</td>
+		<td>line to coordinate - lineTo(flytter til 150px hen, 50px hen)</td>
+	</tr>
+	<tr>
+		<td>lineWidth = 10</td>
+		<td>Gives the line a width</td>
+	</tr>
+	<tr>
+		<td>for ... of ...</td>
+		<td>Findes the array element</td>
+	</tr>
+	<tr>
+		<td>for ... in ...</td>
+		<td>Findes the array index</td>
+	</tr>
+</table>
+				<br><h2 id="no10">Moduler</h2>
+				<h4><a href="https://github.com/Dominoeffekten/DE.modules" target="_blank">Assignment</a></h4>
+				<h4><a href="https://eloquentjavascript.net/10_modules.html" target="_blank">Chapter 10</a></h4>
+
+
+					<p>Module is a piece of program that will help you. It is in commen with object interface. The system is like LEGO.
+						The relationship between modules are called despendencies. <br>
+						In module is there something called packages, which is a chunk of code that can be copied and installed. It contain one or more modules and
+						has information about which other packages depend on. 
+						<br><b>CommenJS</b> Is used by Node.js. 
+						<br><b>Bundlers</b> Is a tool where you can get small files into one big
+
+					</p>
+					<p><b>Modules are Deferred</b></p>
+<pre>
+import {waldo} from 'https://dkexit.eu/libs/fred.mjs'; //Absolut
+import {waldo} from '/libs/fred.mjs'; //Absolut
+import {waldo} from './fred.mjs'; //Relative
+import {waldo} from '../fred.mjs'; //Relative
+</pre>
+<p>
+	Man kan ændre JavaScript loade rækkefølge vha. 'defer'. <br>
+	Når en browser loader tager den alt koden i rækkefølge, og kan derfor gå i stå, men ved at skrive 'defer' vil browseren fortsætte med loade siden, selvom der er andre sider
+	som den også skal loade.
+</p>
+<pre>
+script type='module' src='js0.js' // module
+script src='js1.js'               // normal script
+script defer src='js2.js'         // normal but deferred
+script src='js3.js'               // normal script
+    
+</pre>
+
+
+
+
+
+
+<br><h2 id="no11">SVG</h2>
+<h4><a href="https://github.com/Dominoeffekten/DE.SVG.0" target="_blank">Assignment I</a></h4>
+<h4><a href="https://github.com/Dominoeffekten/DE.SVG.1" target="_blank">Assignment II</a></h4>
+		  		  <p></p>
+<pre>
+</pre>
+<br><h2 id="no12">Heading12</h2>
+<h4><a href="#" target="_blank">Assignment</a></h4>
+		  		  <p></p>
+<pre>
+</pre>
+<br><h2 id="no13">Heading13</h2>
+<h4><a href="#" target="_blank">Assignment</a></h4>
+		  		  <p></p>
+<pre>
+</pre>
+		<br><h2 id="noEnd">Tips &amp; tricks</h2>
+			  <li>Benyt dig af lokale variabler</li>
+			  <li>I objekter hedder funktioner metoder og variabler er objektet eller 'pointer' til objektet</li>
+			  <li>#</li>
+			  <li>#</li>
+			  <li>#</li>
+
+
+
+      </section>
+  </body>
+	
+</html>

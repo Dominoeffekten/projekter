@@ -1,0 +1,99 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    font-size: 30px;
+}
+
+section{
+    width: 60%;
+    margin: 0 auto;
+}
+/*Botten spørger om noget*/
+#botAsk{
+    background-color: lightblue;
+    height: auto;
+    width: 100%;
+    
+}
+#botAsk2{
+    background-color: lightblue;
+    height: auto;
+    width: 100%;
+}
+
+#askBot {
+    display: inline-block;
+    top: 38px;
+    position: absolute;
+}
+
+.botImg{
+    height: auto;
+    width: 100px;
+}
+
+/*Bruger svarer*/
+#youA{
+    background-color: lightgreen;
+    height: auto;
+    width: 100%;
+   
+}
+
+#yours{
+    display: inline-block;
+    top: -38px;
+    position: relative;
+}
+.meImg{
+    height: auto;
+    width: 100px;
+}
+
+/*Botten svarer*/
+#result {
+    display: inline-block;
+    top: -38px;
+    position: relative;
+}
+
+/* svar */
+#input{
+    width: 100%;
+}
+#you {
+    color: #000;
+    padding: 20px;
+    font-size: 26px;
+    margin-top: 5px;
+    border: 4px solid lightgreen;
+    border-radius: 14px;
+    width: 94.5%;
+}
+
+
+@media only screen and (max-width: 800px) {
+    /*Botten spørger om noget*/
+    #botAsk, #botAsk2{
+        width: 100%;
+    }
+    .botImg{
+        height: auto;
+        width: 100px;
+    }
+    /*Bruger svarer*/
+    #youA{
+        width: 100%;
+    }
+    .meImg{
+        left: 60%;
+    }
+
+    /* svar */
+    #input{
+        width: 88%;
+    }
+  
+
+}

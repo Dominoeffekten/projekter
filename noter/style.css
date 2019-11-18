@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ body{
+	 background-color: #ccc;
+	 font-family: Arial, Helvetica, sans-serif;
+	 font-size: 16px;
+}
+
+p{
+	line-height: 25px;
+}
+
+img {
+	height: auto;
+	margin: 15px auto;
+	float: right;
+}
+
+
+a:-webkit-any-link {
+    /*color: blue;*/
+    text-decoration: none;
+}
+
+.main{
+	width: 65%;
+	margin: 0 auto;
+	background-color: #fff;
+	padding:20px;
+}
+pre {
+	background-color: #ccc;
+	padding:20px;
+	overflow-x: auto;
+}
+
+blockquote{
+	border-bottom: 1px #000 solid;
+	border-top: 1px #000 solid;
+	padding: 20px 0;
+}
+
+.miniHeader {
+	width: 13%;
+    left: 1%;
+    background-color: white;
+    border: 1px #000 solid;
+    position: fixed;
+    padding: 16px;
+	height: 400px;
+	overflow-y: auto;
+}
+.miniHeader a{
+	display: block; 
+	line-height: 23px;
+	text-decoration: none;
+}
+
+.miniHeader a:hover{
+	color: darkblue;
+}
+.header {
+	width: 100%; 
+	display: flex;
+	text-align: center;
+}
+.header a{
+	text-decoration: none;
+	font-size: 18px;
+	border: 2px lightblue solid;
+	width: 97%;
+	height: auto;
+	padding: 5px 10px;
+	margin:5px;
+	
+}
+.header a:hover{
+	background-color:lightblue;
+	width: 97%;
+	height: auto;
+}
+
+table{
+	width:auto;
+	margin: 0 auto;
+}
+
+th, td{
+	padding: 10px;
+	border: 1px #000 solid;
+}
+	  
