@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Courier+Prime|Share+Tech+Mono&display=swap' rel='stylesheet' type='text/css'>
+    <style>
+        body{
+            background-color: rgb(56, 147, 177);
+        }
+        #counter .box {
+            height: 200px;
+            width: 150px;
+            outline: 1px solid #fff;
+            margin: 10% auto;
+            top: 10%;
+        }
+        #counter p{
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            padding-top: 15px;
+            font-family: 'Courier Prime';
+        }
+        #counter button{
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            margin: 0 20px;
+            border-radius: 50%;
+        }
+        #watch .box {
+            height: 110px;
+            width: 250px;
+            outline: 1px solid #fff;
+            margin: 10% auto;
+            top: 10%;
+            font-family: 'Share Tech Mono', sans-serif;
+            padding: 10px;
+        }
+        #watch p{
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            letter-spacing: 7px;
+        }
+    </style>
+</head>
+<body>
+    <section id="counter">
+        <div class="box">
+            <p>Counter</p>
+            <p id="number" style="font-size: 30px">1</p>
+            <button style="float: left; padding: 8px 13px;" id="minus">-</button>
+            <button style="float: right; padding: 8px 10px;" id="add">+</button>
+        </div>
+    </section>
+    <section id="watch">
+        <div class="box">
+           <p id="time"></p>
+           <p id="day"></p>
+        </div>
+    </section>
+</body>
+<script>
+    //counter
+    num = 0;
+    function write(){
+        document.getElementById("number").innerHTML = num;
+    }
+    write();
+    document.getElementById("add").addEventListener("click", function(e){
+        num++;
+        console.log(num);
+        write();
+    });
+    document.getElementById("minus").addEventListener("click", function myNumber(e){
+        num--;
+        console.log(num);
+        write();
+    });
+
+    //watch
+    function days(){
+        var d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth() +1;
+        var year = d.getFullYear();
+        document.getElementById("day").innerHTML = day + '/' + month + ' ' + year;
+        console.log(day)
+    }
+    days();
+   
+    function watch(){
+        var d = new Date();
+        var hours = d.getHours();
+        var min = d.getMinutes();
+        document.getElementById("time").innerHTML = hours + ':' + min;
+    }
+    watch();
+
+
+</script>
+</html>
