@@ -4,52 +4,64 @@
 <meta charset="UTF-8">
 <title>Background</title>
 <style>
-
-body{
-  background-color: #fff;
-}
+    section{
+        width: 80%;
+        margin: 0 auto;
+        font-family: sans-serif;
+    }
+    div{
+        margin: 0 auto;
+        padding: 5%;
+        text-align: center;
+    }
+    #divButton{
+        width: 10%;
+    }
+    #change{
+        border: solid 5px #fff;
+        background-color: transparent;
+        color: #fff;
+        font-size: 25px;
+        padding: 8%;
+    }
     
-	</style>
+</style>
 </head>
 
 <body>
     <section>
-        <p>Tryk l, h, c, s, o</p>
-        
+        <div id="divButton">
+            <button type="button" id="change">Click here</button>
+        </div>
+        <div>
+            <h2>Jeg er webudvikler</h2>
+            <p id="text"></p>
+        </div>
       </section>
 </body>
 
-<!-- Orginalt fra https://cdnjs.com/libraries/jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <script>
-  'use strict';
-  //skifte farve
-   window.addEventListener("keydown", event => {
-        if (event.key == "s"){
-            document.body.style.background = "#87C1FF"; //blå
-        }
+    'use strict';
+    var color = '#'+ Math.floor(Math.random()*16777215).toString(16);
+    
+    document.body.style.background = color;
+
+    document.getElementById("change").addEventListener("click", function(){
+        var newColor = '#'+ Math.floor(Math.random()*16777215).toString(16);
+        document.body.style.background = newColor;
     });
-    window.addEventListener("keydown", event => {
-        if (event.key == "o"){
-            document.body.style.background = "#827BE8"; //koral
-        }
-    });
-    window.addEventListener("keydown", event => {
-        if (event.key == "l"){
-            document.body.style.background = "#D794FF"; //lilla
-        }
-    });
-    window.addEventListener("keydown", event => {
-        if (event.key == "c"){
-            document.body.style.background = "#EB65BA"; //lyserød
-        }
-    });
-    window.addEventListener("keydown", event => {
-        if (event.key == "h"){
-            document.body.style.background = "#FF9587"; //orange
-        }
-    });
+    //Text
+    var text = document.getElementById("text");
+    var str = "Mit navn er Rikke";
+    var splitStr = str.split('');
+    for (var i = 0; i < splitStr.length; i++) {
+        (function(i) {
+            setTimeout(function() {
+                text.innerHTML += splitStr[i];
+            }, 100 * i);
+        })(i);
+    };
+ 
 
 
 </script>
